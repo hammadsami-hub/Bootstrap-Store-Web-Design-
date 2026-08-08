@@ -26,7 +26,7 @@ Replace **`PASTE IMAGE URL`** with your preferred image URL, and your image will
 
 ## 📸 Preview
 
-![Bootstrap Store Web Design](screencapture-wishflowers-co-2026-08-08-19_41_56.png)
+![Bootstrap Store Web Design](Web Store Design.png)
 
 ## 👨‍💻 Developer
 
