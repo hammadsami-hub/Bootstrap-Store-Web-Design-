@@ -1,32 +1,36 @@
-# Bootstrap Store Web Design
+# 🛍️ Bootstrap Store Web Design
 
-A modern **Bootstrap-based store website** with a clean, responsive and user-friendly design.
+A modern and responsive **Bootstrap Store Web Design** with a clean, professional and user-friendly interface.
 
-### Features
+## ✨ Features
 
-* 📱 Fully responsive Mobile, Tablet & Desktop
-* 🎨 Clean and modern UI
-* ⚡ Fast and lightweight
-* 🔍 SEO-friendly structure
-* 🛒 Store/e-commerce style design
-* 🖼️ Easy image customization
+* 📱 Fully Responsive — Mobile, Tablet & Desktop
+* 🎨 Clean & Modern UI
+* ⚡ Fast & Lightweight
+* 🔍 SEO-Friendly Structure
+* 🛒 E-commerce / Store Layout
+* 🖼️ Easy Image Customization
 * 💻 Built with HTML, CSS & Bootstrap
 
-### Image Customization
+## 🖼️ Image Customization
 
-You can easily add your own images.
-In the code, simply replace **`PASTE IMAGE URL`** with your preferred image URL.
+You can easily change the images used in the website.
+
+Simply find:
 
 ```html
 <img src="PASTE IMAGE URL" alt="Product Image">
 ```
 
-Just paste your image URL and the image will be updated.
-screencapture-wishflowers-co-2026-08-08-19_41_56.png
+Replace **`PASTE IMAGE URL`** with your preferred image URL, and your image will appear automatically.
 
+## 📸 Preview
 
-### Developer
+![Bootstrap Store Web Design](screencapture-wishflowers-co-2026-08-08-19_41_56.png)
 
-**Hammad Sami** 
+## 👨‍💻 Developer
 
-🌐 **Portfolio:** hammadsami.com
+**Hammad Sami**
+WordPress & Shopify Developer
+
+🌐 **Portfolio:** [hammadsami.com](https://hammadsami.com)
