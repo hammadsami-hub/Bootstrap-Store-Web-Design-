@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WISH | Premium Flower Studio</title>
+<meta name="description" content="WISH Flower Studio - premium blooms chosen for their beauty. Mixed bouquets, flowers in a box, monobouquets, tulips and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<style>
+:root {
+  --wish-black: #1a1714;
+  --wish-cream: #f7f2ec;
+  --wish-cream-2: #f0e8df;
+  --wish-rose: #b8798c;
+  --wish-rose-dark: #96586b;
+  --wish-line: #e4dcd1;
+  --wish-gray: #6f6a63;
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  color: var(--wish-black);
+  background-color: #ffffff;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-pad {
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+}
+
+.eyebrow-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2.8rem;
+}
+
+.eyebrow-title span {
+  display: inline-block;
+  position: relative;
+  padding: 0 1.2rem;
+}
+
+.eyebrow-title span::before,
+.eyebrow-title span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 1px;
+  background: var(--wish-rose);
+}
+
+.eyebrow-title span::before { right: 100%; }
+.eyebrow-title span::after { left: 100%; }
+
+.btn-wish {
+  font-family: 'Jost', sans-serif;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 0.9rem 2.4rem;
+  border: 1px solid var(--wish-black);
+  background: var(--wish-black);
+  color: #fff;
+  border-radius: 0;
+  transition: all 0.35s ease;
+}
+
+.btn-wish:hover {
+  background: transparent;
+  color: var(--wish-black);
+}
+
+.btn-wish-outline {
+  font-family: 'Jost', sans-serif;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 0.9rem 2.4rem;
+  border: 1px solid var(--wish-black);
+  background: transparent;
+  color: var(--wish-black);
+  border-radius: 0;
+  transition: all 0.35s ease;
+}
+
+.btn-wish-outline:hover {
+  background: var(--wish-black);
+  color: #fff;
+}
+
+/* ---------- Top utility bar ---------- */
+.wish-topbar {
+  background: var(--wish-black);
+  color: #f1ece5;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.45rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.wish-topbar .marquee-track {
+  display: inline-flex;
+  animation: wish-marquee 22s linear infinite;
+}
+
+.wish-topbar:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.wish-topbar .marquee-track span {
+  padding: 0 2.5rem;
+}
+
+@keyframes wish-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ---------- Navbar ---------- */
+.wish-header {
+  z-index: 1030;
+  padding-top: 6px;
+  background: transparent;
+  transition: background 0.4s ease;
+}
+
+.wish-header.is-scrolled {
+  background: #ffffff;
+}
+
+.wish-header .wish-topbar {
+  transition: background 0.4s ease;
+}
+
+.wish-navbar {
+  background: transparent;
+  padding: 1.7rem 0;
+  border-bottom: 1px solid transparent;
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.wish-header.is-scrolled .wish-navbar {
+  background: #ffffff;
+  border-bottom: 1px solid var(--wish-line);
+  box-shadow: 0 4px 16px rgba(20, 17, 15, 0.06);
+}
+
+.wish-nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.wish-nav-left {
+  display: flex;
+  align-items: center;
+  flex: 1 1 0;
+}
+
+.wish-nav-right {
+  flex: 1 1 0;
+  justify-content: flex-end;
+}
+
+.wish-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 0;
+}
+
+.wish-logo-img {
+  height: 42px;
+  width: auto;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.35));
+  transition: filter 0.4s ease;
+}
+
+.wish-header.is-scrolled .wish-logo-img {
+  filter: none;
+}
+
+.wish-nav .nav-link {
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0.85rem;
+  padding: 0.4rem 0;
+  position: relative;
+  transition: color 0.4s ease;
+}
+
+.wish-header.is-scrolled .wish-nav .nav-link {
+  color: var(--wish-black);
+}
+
+.wish-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--wish-rose);
+  transition: width 0.3s ease;
+}
+
+.wish-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.wish-mobile-menu {
+  flex-basis: 100%;
+  order: 5;
+  background: #fff;
+  margin-top: 0.9rem;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 10px 28px rgba(20, 17, 15, 0.1);
+}
+
+.wish-mobile-menu .nav-link {
+  color: var(--wish-black) !important;
+}
+
+.navbar-toggler {
+  color: #fff;
+  transition: color 0.4s ease;
+}
+
+.wish-header.is-scrolled .navbar-toggler {
+  color: var(--wish-black);
+}
+
+.wish-icon-link {
+  color: #fff;
+  font-size: 1.15rem;
+  margin-left: 1.1rem;
+  position: relative;
+  transition: color 0.4s ease;
+}
+
+.wish-header.is-scrolled .wish-icon-link {
+  color: var(--wish-black);
+}
+
+.wish-icon-link .badge-count {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: var(--wish-rose);
+  color: #fff;
+  font-size: 0.6rem;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Jost', sans-serif;
+}
+
+/* ---------- Hero ---------- */
+.wish-hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(90deg, rgba(20,17,15,0.55) 0%, rgba(20,17,15,0.05) 60%), url('PASTE IMAGE URL');
+  background-size: cover;
+  background-position: center;
+}
+
+.wish-hero-content {
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.wish-hero-content h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+  margin-bottom: 1.8rem;
+}
+
+/* ---------- Category strip ---------- */
+.cat-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background-color: var(--wish-cream-2);
+}
+
+.cat-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.cat-card .cat-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 45%;
+  background: linear-gradient(to top, rgba(15,13,11,0.75), rgba(15,13,11,0));
+}
+
+.cat-card .cat-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1.2rem;
+  text-align: center;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  padding: 0 0.6rem;
+}
+
+.cat-card .corner {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0;
+  opacity: 0;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.cat-card .corner-tl {
+  top: 12px;
+  left: 12px;
+  border-top-width: 2px;
+  border-left-width: 2px;
+  transform: translate(-8px, -8px);
+}
+
+.cat-card .corner-tr {
+  top: 12px;
+  right: 12px;
+  border-top-width: 2px;
+  border-right-width: 2px;
+  transform: translate(8px, -8px);
+}
+
+.cat-card:hover img {
+  transform: scale(1.08);
+}
+
+.cat-card:hover .corner {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* ---------- Product cards ---------- */
+.product-card {
+  background: #fff;
+}
+
+.product-thumb {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--wish-cream-2);
+  display: block;
+}
+
+.product-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-thumb .corner {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0;
+  opacity: 0;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  z-index: 2;
+}
+
+.product-thumb .corner-tl {
+  top: 10px;
+  left: 10px;
+  border-top-width: 2px;
+  border-left-width: 2px;
+  transform: translate(-8px, -8px);
+}
+
+.product-thumb .corner-tr {
+  top: 10px;
+  right: 10px;
+  border-top-width: 2px;
+  border-right-width: 2px;
+  transform: translate(8px, -8px);
+}
+
+.product-thumb:hover img {
+  transform: scale(1.07);
+}
+
+.product-thumb:hover .corner {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.product-thumb .quick-add {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 23, 20, 0.88);
+  color: #fff;
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.7rem 0;
+  transform: translateY(100%);
+  transition: transform 0.35s ease;
+}
+
+.product-thumb:hover .quick-add {
+  transform: translateY(0);
+}
+
+.product-name {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.product-price {
+  font-size: 0.9rem;
+  color: var(--wish-rose-dark);
+  font-weight: 500;
+}
+
+/* ---------- Custom carousel ---------- */
+.wish-carousel {
+  position: relative;
+  padding: 0 3.2rem;
+}
+
+.wish-carousel-viewport {
+  overflow: hidden;
+}
+
+.wish-carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.wish-carousel-track .carousel-slot {
+  flex: 0 0 auto;
+  padding: 0 0.75rem;
+}
+
+.wish-carousel-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--wish-line);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--wish-black);
+  z-index: 3;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.wish-carousel-btn:hover {
+  background: var(--wish-black);
+  color: #fff;
+}
+
+.wish-carousel-btn.prev { left: 0; }
+.wish-carousel-btn.next { right: 0; }
+
+.wish-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.wish-carousel-dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--wish-line);
+  padding: 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.wish-carousel-dots button.active {
+  background: var(--wish-rose);
+  transform: scale(1.3);
+}
+
+/* ---------- Split promo ---------- */
+.promo-feature-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.promo-feature-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.promo-feature-cta {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.92);
+  padding: 0.9rem 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--wish-black);
+  transition: background 0.3s ease;
+}
+
+.promo-feature-cta:hover {
+  background: #ffffff;
+}
+
+.promo-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.6);
+  background: rgba(20,17,15,0.35);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: background 0.3s ease;
+}
+
+.promo-carousel-arrow:hover {
+  background: rgba(20,17,15,0.65);
+}
+
+.promo-carousel-arrow.prev { left: 16px; }
+.promo-carousel-arrow.next { right: 16px; }
+
+.promo-feature-dots {
+  position: absolute;
+  bottom: 70px;
+  margin: 0;
+}
+
+.promo-feature-dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.55);
+  opacity: 1;
+  margin: 0 4px;
+  text-indent: -9999px;
+}
+
+.promo-feature-dots button.active {
+  background: #ffffff;
+  transform: scale(1.3);
+}
+
+.promo-banner-img {
+  position: relative;
+  min-height: 460px;
+  background-image: linear-gradient(90deg, rgba(15,13,11,0.15), rgba(15,13,11,0.65)), url('PASTE IMAGE URL');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.promo-banner-img .promo-banner-text {
+  color: #fff;
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Full-width bloom banner ---------- */
+.bloom-banner {
+  position: relative;
+  min-height: 70vh;
+  background-image: linear-gradient(180deg, rgba(10,9,8,0.15), rgba(10,9,8,0.55)), url('PASTE IMAGE URL');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+.bloom-banner .bloom-text {
+  color: #fff;
+  padding-bottom: 3.5rem;
+  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  max-width: 640px;
+}
+
+/* ---------- Occasion circles ---------- */
+.occasion-circle {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: block;
+}
+
+.occasion-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.occasion-circle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,9,8,0.65), rgba(10,9,8,0) 55%);
+}
+
+.occasion-circle:hover img {
+  transform: scale(1.08);
+}
+
+.occasion-circle .occasion-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1.4rem;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+}
+
+/* ---------- Subscription split ---------- */
+.wish-subscribe {
+  background: var(--wish-cream);
+}
+
+.wish-subscribe img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 340px;
+}
+
+.subscribe-mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- Instagram ---------- */
+.insta-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.insta-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.insta-item:hover img {
+  transform: scale(1.08);
+}
+
+.insta-cta {
+  background: var(--wish-black);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+.insta-cta i {
+  font-size: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+
+/* ---------- Feature strip ---------- */
+.feature-item i {
+  font-size: 1.9rem;
+  color: var(--wish-rose);
+  margin-bottom: 0.9rem;
+  display: block;
+}
+
+.feature-item h6 {
+  font-family: 'Jost', sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+}
+
+.feature-item p {
+  font-size: 0.85rem;
+  color: var(--wish-gray);
+  margin-bottom: 0;
+}
+
+/* ---------- About ---------- */
+.wish-about {
+  background: var(--wish-cream);
+}
+
+.wish-about p {
+  color: var(--wish-gray);
+  max-width: 640px;
+}
+
+.about-img-wrap {
+  overflow: hidden;
+}
+
+.about-img-wrap img {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+.read-more-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--wish-black);
+  border-bottom: 1px solid var(--wish-black);
+  padding-bottom: 0.15rem;
+}
+
+.bounce-arrow {
+  display: inline-block;
+  animation: bounceArrow 1.4s ease-in-out infinite;
+}
+
+@keyframes bounceArrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* ---------- Footer ---------- */
+.wish-footer {
+  background: var(--wish-black);
+  color: #cfc9c1;
+  padding-top: 4rem;
+}
+
+.wish-footer h5 {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  font-size: 1.7rem;
+  letter-spacing: 0.04em;
+}
+
+.wish-footer h6 {
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.1rem;
+}
+
+.wish-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.wish-footer ul li {
+  margin-bottom: 0.55rem;
+  font-size: 0.85rem;
+}
+
+.wish-footer ul li a {
+  color: #cfc9c1;
+  transition: color 0.3s ease;
+}
+
+.wish-footer ul li a:hover {
+  color: #fff;
+}
+
+.wish-footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  letter-spacing: 0.04em;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.wish-footer-logo .logo-swash {
+  font-style: italic;
+}
+
+.wish-footer-logo sup {
+  display: block;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #cfc9c1;
+  top: 0;
+  margin-top: 0.2rem;
+}
+
+.btn-wish-outline-light {
+  display: inline-block;
+  font-family: 'Jost', sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 0.85rem 1.6rem;
+  border: 1px solid #55504a;
+  color: #fff;
+  background: transparent;
+  transition: all 0.35s ease;
+}
+
+.btn-wish-outline-light:hover {
+  background: #fff;
+  color: var(--wish-black);
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.footer-credit-link {
+  color: #cfc9c1;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-credit-link:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #45403a;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-right: 0.5rem;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.social-icon:hover {
+  background: var(--wish-rose);
+  border-color: var(--wish-rose);
+}
+
+.footer-bottom {
+  border-top: 1px solid #322e29;
+  margin-top: 3rem;
+  padding: 1.6rem 0;
+  font-size: 0.8rem;
+  color: #8a847c;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991.98px) {
+  .section-pad { padding-top: 3.6rem; padding-bottom: 3.6rem; }
+  .wish-mobile-menu .nav-link { text-align: center; margin: 0.4rem 0.7rem; }
+  .wish-carousel { padding: 0 2.4rem; }
+}
+
+@media (max-width: 767.98px) {
+  .wish-hero { min-height: 60vh; text-align: center; }
+  .wish-hero-content { padding: 1rem 0; }
+  .eyebrow-title { font-size: 1.4rem; margin-bottom: 2rem; }
+  .eyebrow-title span::before,
+  .eyebrow-title span::after { width: 18px; }
+  .bloom-banner .bloom-text { max-width: 100%; text-align: center; }
+  .bloom-banner { justify-content: center; text-align: center; }
+  .wish-carousel { padding: 0 2.1rem; }
+  .wish-carousel-btn { width: 34px; height: 34px; }
+  .promo-banner-img { min-height: 320px; text-align: center; }
+  .promo-carousel-arrow { width: 34px; height: 34px; }
+  .footer-bottom { text-align: center; }
+}
+
+@media (max-width: 575.98px) {
+  .wish-logo-img { height: 32px; }
+  .cat-card .cat-label { font-size: 0.85rem; }
+  .wish-topbar { font-size: 0.65rem; }
+}
+
+</style>
+</head>
+<body>
+
+<header class="wish-header fixed-top" id="wishHeader">
+
+  <div class="wish-topbar">
+    <div class="marquee-track">
+      <span>PREMIUM BLOOMS CHOSEN FOR THEIR BEAUTY</span>
+      <span>FRESHNESS AND EMOTION</span>
+      <span>PREMIUM BLOOMS CHOSEN FOR THEIR BEAUTY</span>
+      <span>FRESHNESS AND EMOTION</span>
+      <span>PREMIUM BLOOMS CHOSEN FOR THEIR BEAUTY</span>
+      <span>FRESHNESS AND EMOTION</span>
+    </div>
+  </div>
+
+  <nav class="navbar wish-navbar py-0">
+    <div class="container-fluid px-3 px-lg-5 wish-nav-row">
+
+      <div class="wish-nav-left">
+        <button class="navbar-toggler border-0 p-0 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#wishNavMenu">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+        <ul class="navbar-nav wish-nav d-none d-lg-flex flex-row">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Categories</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Monobouquets</a></li>
+              <li><a class="dropdown-item" href="#">Mixed Bouquets</a></li>
+              <li><a class="dropdown-item" href="#">Flowers in a Box</a></li>
+              <li><a class="dropdown-item" href="#">Flowers in a Basket</a></li>
+              <li><a class="dropdown-item" href="#">Additionally</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Occasions</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Birthday</a></li>
+              <li><a class="dropdown-item" href="#">Congratulations</a></li>
+              <li><a class="dropdown-item" href="#">Just Because</a></li>
+              <li><a class="dropdown-item" href="#">Sympathy</a></li>
+              <li><a class="dropdown-item" href="#">Thank You</a></li>
+              <li><a class="dropdown-item" href="#">Wedding</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Subscription</a></li>
+        </ul>
+      </div>
+
+      <a class="navbar-brand wish-logo" href="#">
+        <img src="PASTE LOGO URL" alt="WISH Flowers" class="wish-logo-img">
+      </a>
+
+      <div class="d-flex align-items-center wish-nav-right">
+        <ul class="navbar-nav wish-nav d-none d-lg-flex flex-row me-2">
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacts</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+        </ul>
+        <a href="#" class="wish-icon-link"><i class="bi bi-search"></i></a>
+        <a href="#" class="wish-icon-link">
+          <i class="bi bi-bag"></i>
+          <span class="badge-count">0</span>
+        </a>
+      </div>
+
+      <div class="collapse wish-mobile-menu" id="wishNavMenu">
+        <ul class="navbar-nav wish-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Categories</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Monobouquets</a></li>
+              <li><a class="dropdown-item" href="#">Mixed Bouquets</a></li>
+              <li><a class="dropdown-item" href="#">Flowers in a Box</a></li>
+              <li><a class="dropdown-item" href="#">Flowers in a Basket</a></li>
+              <li><a class="dropdown-item" href="#">Additionally</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Occasions</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Birthday</a></li>
+              <li><a class="dropdown-item" href="#">Congratulations</a></li>
+              <li><a class="dropdown-item" href="#">Just Because</a></li>
+              <li><a class="dropdown-item" href="#">Sympathy</a></li>
+              <li><a class="dropdown-item" href="#">Thank You</a></li>
+              <li><a class="dropdown-item" href="#">Wedding</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Subscription</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacts</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+<section class="wish-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="wish-hero-content">
+          <h1>LET WISHES BLOOM<br>THROUGH FLOWERS</h1>
+          <a href="#" class="btn-wish">View All Flowers</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="categories" class="pt-4 pt-lg-5">
+  <div class="row g-2 g-md-3 mx-0 px-2 px-md-3">
+
+    <div class="col-6 col-md-4 col-lg">
+      <a href="#" class="cat-card">
+        <img src="PASTE IMAGE URL" alt="Flowers in a Basket">
+        <span class="corner corner-tl"></span>
+        <span class="corner corner-tr"></span>
+        <div class="cat-overlay"></div>
+        <span class="cat-label">Flowers<br>in a Basket</span>
+      </a>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg">
+      <a href="#" class="cat-card">
+        <img src="PASTE IMAGE URL" alt="Mixed Bouquets">
+        <span class="corner corner-tl"></span>
+        <span class="corner corner-tr"></span>
+        <div class="cat-overlay"></div>
+        <span class="cat-label">Mixed<br>Bouquets</span>
+      </a>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg">
+      <a href="#" class="cat-card">
+        <img src="PASTE IMAGE URL" alt="Flowers in a Box">
+        <span class="corner corner-tl"></span>
+        <span class="corner corner-tr"></span>
+        <div class="cat-overlay"></div>
+        <span class="cat-label">Flowers<br>in a Box</span>
+      </a>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg">
+      <a href="#" class="cat-card">
+        <img src="PASTE IMAGE URL" alt="Monobouquets">
+        <span class="corner corner-tl"></span>
+        <span class="corner corner-tr"></span>
+        <div class="cat-overlay"></div>
+        <span class="cat-label">Monobouquets</span>
+      </a>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg">
+      <a href="#" class="cat-card">
+        <img src="PASTE IMAGE URL" alt="Tulips">
+        <span class="corner corner-tl"></span>
+        <span class="corner corner-tr"></span>
+        <div class="cat-overlay"></div>
+        <span class="cat-label">Tulips</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+    <h2 class="eyebrow-title"><span>Shop Our Best Sellers</span></h2>
+
+    <div class="wish-carousel" data-wish-carousel>
+      <button class="wish-carousel-btn prev" aria-label="Previous"><i class="bi bi-arrow-left"></i></button>
+      <button class="wish-carousel-btn next" aria-label="Next"><i class="bi bi-arrow-right"></i></button>
+
+      <div class="wish-carousel-viewport">
+        <div class="wish-carousel-track">
+
+          <div class="carousel-slot">
+            <div class="product-card">
+              <a href="#" class="product-thumb">
+                <img src="https://wishflowers.co/wp-content/uploads/2026/02/img_2372-1.jpg" alt="Heart-Shaped Balloons">
+                <span class="corner corner-tl"></span>
+                <span class="corner corner-tr"></span>
+                <span class="quick-add">Add to Cart</span>
+              </a>
+              <p class="product-name">Heart-Shaped Balloons</p>
+              <p class="product-price">$50</p>
+            </div>
+          </div>
+
+          <div class="carousel-slot">
+            <div class="product-card">
+              <a href="#" class="product-thumb">
+                <img src="https://wishflowers.co/wp-content/uploads/2025/07/img_8607-1.png" alt="Blush Elegance Bouquet">
+                <span class="corner corner-tl"></span>
+                <span class="corner corner-tr"></span>
+                <span class="quick-add">Add to Cart</span>
+              </a>
+              <p class="product-name">Blush Elegance Bouquet</p>
+              <p class="product-price">$95</p>
+            </div>
+          </div>
+
+          <div class="carousel-slot">
+            <div class="product-card">
+              <a href="#" class="product-thumb">
+                <img src="https://wishflowers.co/wp-content/uploads/2026/02/img_2340-3.jpg" alt="Pure Love">
+                <span class="corner corner-tl"></span>
+                <span class="corner corner-tr"></span>
+                <span class="quick-add">Add to Cart</span>
+              </a>
+              <p class="product-name">Pure Love</p>
+              <p class="product-price">$120</p>
+            </div>
+          </div>
+
+          <div class="carousel-slot">
+            <div class="product-card">
+              <a href="#" class="product-thumb">
+                <img src="https://wishflowers.co/wp-content/uploads/2026/02/img_1547-2.jpg" alt="Love Story">
+                <span class="corner corner-tl"></span>
+                <span class="corner corner-tr"></span>
+                <span class="quick-add">Add to Cart</span>
+              </a>
+              <p class="product-name">Love Story</p>
+              <p class="product-price">$95</p>
+            </div>
+          </div>
+
+          <div class="carousel-slot">
+            <div class="product-card">
+              <a href="#" class="product-thumb">
+                <img src="https://wishflowers.co/wp-content/uploads/2026/02/img_4001-1.jpg" alt="Peony Touch">
+                <span class="corner corner-tl"></span>
+                <span class="corner corner-tr"></span>
+                <span class="quick-add">Add to Cart</span>
+              </a>
+              <p class="product-name">Peony Touch</p>
+              <p class="product-price">$110</p>
+            </div>
+          </div>
+
+          <div class="carousel-slot">
+            <div class="product-card">
+              <a href="#" class="product-thumb">
+                <img src="https://wishflowers.co/wp-content/uploads/2025/07/img_0462-1.png" alt="Grand Bloom Bouquet">
+                <span class="corner corner-tl"></span>
+                <span class="corner corner-tr"></span>
+                <span class="quick-add">Add to Cart</span>
+              </a>
+              <p class="product-name">Grand Bloom Bouquet</p>
+              <p class="product-price">$190</p>
+            </div>
+          </div>
+
+          <div class="carousel-slot">
+            <div class="product-card">
+              <a href="#" class="product-thumb">
+                <img src="https://wishflowers.co/wp-content/uploads/2025/07/img_0919-1.png" alt="Luxury Pink Garden Roses">
+                <span class="corner corner-tl"></span>
+                <span class="corner corner-tr"></span>
+                <span class="quick-add">Select Options</span>
+              </a>
+              <p class="product-name">Luxury Pink Garden Roses</p>
+              <p class="product-price">$75 &ndash; $255</p>
+            </div>
+          </div>
+
+          <div class="carousel-slot">
+            <div class="product-card">
+              <a href="#" class="product-thumb">
+                <img src="https://wishflowers.co/wp-content/uploads/2025/07/img_8381-1.png" alt="Pastel Romance Bouquet">
+                <span class="corner corner-tl"></span>
+                <span class="corner corner-tr"></span>
+                <span class="quick-add">Add to Cart</span>
+              </a>
+              <p class="product-name">Pastel Romance Bouquet</p>
+              <p class="product-price">$187</p>
+            </div>
+          </div>
+
+          <div class="carousel-slot">
+            <div class="product-card">
+              <a href="#" class="product-thumb">
+                <img src="https://wishflowers.co/wp-content/uploads/2025/07/img_7480-1.png" alt="Peony Dream Basket">
+                <span class="corner corner-tl"></span>
+                <span class="corner corner-tr"></span>
+                <span class="quick-add">Add to Cart</span>
+              </a>
+              <p class="product-name">Peony Dream Basket</p>
+              <p class="product-price">$550</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="wish-carousel-dots"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad pt-0">
+  <div class="container-fluid px-0">
+    <div class="row g-0">
+
+      <div class="col-lg-6">
+        <div id="promoFeatureCarousel" class="carousel slide promo-feature-card" data-bs-ride="carousel" data-bs-interval="3500">
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <img src="https://wishflowers.co/wp-content/uploads/2025/07/img_0462-1.png" alt="Grand Bloom Bouquet" class="promo-feature-img">
+              <a href="#" class="promo-feature-cta">
+                <span><i class="bi bi-bag me-2"></i>Grand Bloom Bouquet</span>
+                <span class="fw-semibold">$190</span>
+              </a>
+            </div>
+
+            <div class="carousel-item">
+              <img src="https://wishflowers.co/wp-content/uploads/2025/07/img_8607-1.png" alt="Blush Elegance Bouquet" class="promo-feature-img">
+              <a href="#" class="promo-feature-cta">
+                <span><i class="bi bi-bag me-2"></i>Blush Elegance Bouquet</span>
+                <span class="fw-semibold">$95</span>
+              </a>
+            </div>
+
+            <div class="carousel-item">
+              <img src="https://wishflowers.co/wp-content/uploads/2025/07/img_7480-1.png" alt="Peony Dream Basket" class="promo-feature-img">
+              <a href="#" class="promo-feature-cta">
+                <span><i class="bi bi-bag me-2"></i>Peony Dream Basket</span>
+                <span class="fw-semibold">$550</span>
+              </a>
+            </div>
+
+          </div>
+
+          <button class="promo-carousel-arrow prev" type="button" data-bs-target="#promoFeatureCarousel" data-bs-slide="prev">
+            <i class="bi bi-arrow-left"></i>
+          </button>
+          <button class="promo-carousel-arrow next" type="button" data-bs-target="#promoFeatureCarousel" data-bs-slide="next">
+            <i class="bi bi-arrow-right"></i>
+          </button>
+
+          <div class="carousel-indicators promo-feature-dots">
+            <button type="button" data-bs-target="#promoFeatureCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#promoFeatureCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#promoFeatureCarousel" data-bs-slide-to="2"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="promo-banner-img h-100">
+          <div class="container">
+            <p class="promo-banner-text mb-0">Let your wishes bloom<br>like the most beautiful flowers.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="occasions" class="section-pad pt-0">
+  <div class="container">
+    <h2 class="eyebrow-title"><span>Flowers for Every Occasion</span></h2>
+
+    <div class="wish-carousel" data-wish-carousel>
+      <button class="wish-carousel-btn prev" aria-label="Previous"><i class="bi bi-arrow-left"></i></button>
+      <button class="wish-carousel-btn next" aria-label="Next"><i class="bi bi-arrow-right"></i></button>
+
+      <div class="wish-carousel-viewport">
+        <div class="wish-carousel-track">
+
+          <div class="carousel-slot">
+            <div class="product-card">
+              <a href="#" class="product-thumb">
+                <img src="https://wishflowers.co/wp-content/uploads/2026/02/img_1547-2.jpg" alt="Love Story">
+                <span class="corner corner-tl"></span>
+                <span class="corner corner-tr"></span>
+                <span class="quick-add">Add to Cart</span>
+              </a>
+              <p class="product-name">Love Story</p>
+              <p class="product-price">$95</p>
+            </div>
+          </div>
+
+          <div class="carousel-slot">
+            <div class="product-card">
+              <a href="#" class="product-thumb">
+                <img src="https://wishflowers.co/wp-content/uploads/2026/02/img_4001-1.jpg" alt="Peony Touch">
+                <span class="corner corner-tl"></span>
+                <span class="corner corner-tr"></span>
+                <span class="quick-add">Add to Cart</span>
+              </a>
+              <p class="product-name">Peony Touch</p>
+              <p class="product-price">$110</p>
+            </div>
+          </div>
+
+          <div class="carousel-slot">
+            <div class="product-card">
+              <a href="#" class="product-thumb">
+                <img src="https://wishflowers.co/wp-content/uploads/2026/02/img_1417-2.jpg" alt="With All My Love">
+                <span class="corner corner-tl"></span>
+                <span class="corner corner-tr"></span>
+                <span class="quick-add">Add to Cart</span>
+              </a>
+              <p class="product-name">With All My Love</p>
+              <p class="product-price">$185</p>
+            </div>
+          </div>
+
+          <div class="carousel-slot">
+            <div class="product-card">
+              <a href="#" class="product-thumb">
+                <img src="https://wishflowers.co/wp-content/uploads/2026/02/img_1841-2-scaled.jpg" alt="Rose Symphony">
+                <span class="corner corner-tl"></span>
+                <span class="corner corner-tr"></span>
+                <span class="quick-add">Add to Cart</span>
+              </a>
+              <p class="product-name">Rose Symphony</p>
+              <p class="product-price">$240</p>
+            </div>
+          </div>
+
+          <div class="carousel-slot">
+            <div class="product-card">
+              <a href="#" class="product-thumb">
+                <img src="https://wishflowers.co/wp-content/uploads/2025/07/img_8607-1.png" alt="Blush Elegance Bouquet">
+                <span class="corner corner-tl"></span>
+                <span class="corner corner-tr"></span>
+                <span class="quick-add">Add to Cart</span>
+              </a>
+              <p class="product-name">Blush Elegance Bouquet</p>
+              <p class="product-price">$95</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="wish-carousel-dots"></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloom-banner">
+  <div class="container">
+    <p class="bloom-text mb-0">Let your wishes bloom like the<br>most beautiful flowers.</p>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+    <h2 class="eyebrow-title"><span>Flowers for Every Occasion</span></h2>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="occasion-circle">
+          <img src="PASTE IMAGE URL" alt="Birthday">
+          <span class="occasion-label">Birthday</span>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="occasion-circle">
+          <img src="PASTE IMAGE URL" alt="Congratulations">
+          <span class="occasion-label">Congratulations</span>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="occasion-circle">
+          <img src="PASTE IMAGE URL" alt="Just Because">
+          <span class="occasion-label">Just Because</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="#" class="btn-wish-outline">View All Flowers</a>
+    </div>
+  </div>
+</section>
+
+<section id="subscription" class="wish-subscribe">
+  <div class="row g-0 align-items-stretch">
+    <div class="col-lg-6">
+      <img src="PASTE IMAGE URL" alt="Flower Subscription">
+    </div>
+    <div class="col-lg-6 d-flex align-items-center">
+      <div class="p-5 p-lg-5 mx-auto text-center" style="max-width: 480px;">
+        <p class="subscribe-mark mb-3">&#10052;</p>
+        <h2 class="mb-4" style="letter-spacing:0.08em;">FLOWER<br>SUBSCRIPTIONS</h2>
+        <p class="text-muted mb-4">Keep the mood fresh with stunning bouquets, delivered right on time. Whether it's for you or someone else, it's the simplest way to turn a simple gesture into an ongoing experience.</p>
+        <a href="#" class="btn-wish">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad pb-0">
+  <div class="container-fluid px-0">
+    <div class="row g-0 align-items-center text-center text-lg-start">
+
+      <div class="col-6 col-lg-2 insta-item">
+        <img src="PASTE IMAGE URL" alt="Instagram post">
+      </div>
+
+      <div class="col-12 col-lg-2 insta-cta">
+        <i class="bi bi-instagram"></i>
+        <p class="mb-0 fw-semibold" style="letter-spacing:0.1em;">FIND US ON<br>INSTAGRAM</p>
+        <small class="text-muted">@wishflowers.chicago</small>
+      </div>
+
+      <div class="col-6 col-lg-2 insta-item">
+        <img src="PASTE IMAGE URL" alt="Instagram post">
+      </div>
+      <div class="col-6 col-lg-2 insta-item">
+        <img src="PASTE IMAGE URL" alt="Instagram post">
+      </div>
+      <div class="col-6 col-lg-2 insta-item">
+        <img src="PASTE IMAGE URL" alt="Instagram post">
+      </div>
+      <div class="col-6 col-lg-2 insta-item">
+        <img src="PASTE IMAGE URL" alt="Instagram post">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-6 col-lg-3 feature-item">
+        <i class="bi bi-flower1"></i>
+        <h6>Carefully Selected</h6>
+        <p>From carefully selected flowers to elegant wrapping, every detail matters.</p>
+      </div>
+      <div class="col-6 col-lg-3 feature-item">
+        <i class="bi bi-gift"></i>
+        <h6>Designed to Match</h6>
+        <p>Designed to match every mood, moment, and celebration.</p>
+      </div>
+      <div class="col-6 col-lg-3 feature-item">
+        <i class="bi bi-stars"></i>
+        <h6>Timeless Arrangements</h6>
+        <p>From timeless classics to modern arrangements, find the perfect design.</p>
+      </div>
+      <div class="col-6 col-lg-3 feature-item">
+        <i class="bi bi-truck"></i>
+        <h6>Reliable Delivery</h6>
+        <p>Reliable delivery to ensure your flowers arrive fresh and beautiful.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="wish-about section-pad">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <h2 class="mb-4" style="letter-spacing:0.1em;">WISH FLOWER STUDIO</h2>
+        <p>Welcome to our flower studio, where artistry meets nature to create unforgettable floral arrangements. We pride ourselves on offering a wide selection of fresh, premium-quality flowers that are handpicked and beautifully crafted into unique designs. Whether you're looking for a bouquet to celebrate a special occasion, a centerpiece to enhance your home decor, or a thoughtful gift, we have something for everyone. Take advantage of our flexible subscription plans ensuring regular delivery of stunning blooms right to your doorstep.</p>
+
+        <div class="collapse" id="aboutMoreText">
+          <p>Enjoy exclusive discounts and customize your subscription to match your style and schedule. Every arrangement is put together by hand on the day it ships, using the freshest stems we can source, so what arrives at your door looks just like what you saw when you ordered. From first bouquet to a standing weekly delivery, our team is here to help you find the right fit.</p>
+        </div>
+
+        <button class="read-more-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#aboutMoreText" aria-expanded="false" aria-controls="aboutMoreText">
+          <span class="read-more-label">Read More</span>
+          <i class="bi bi-arrow-down bounce-arrow"></i>
+        </button>
+      </div>
+      <div class="col-lg-6">
+        <div class="about-img-wrap">
+          <img src="PASTE IMAGE URL" alt="Wish Flower Studio">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer" class="wish-footer">
+  <div class="container">
+    <div class="row g-5">
+
+      <div class="col-lg-3">
+        <p class="wish-footer-logo mb-4">WI<span class="logo-swash">S</span>H<sup>FLOWERS</sup></p>
+        <h6 class="mb-3">SHARE YOUR<br>THOUGHTS</h6>
+        <a href="#" class="btn btn-wish-outline-light">Send Feedback</a>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h6>Shop</h6>
+        <ul>
+          <li><a href="#">Monobouquets</a></li>
+          <li><a href="#">Mixed bouquets</a></li>
+          <li><a href="#">Flowers in a box</a></li>
+          <li><a href="#">Flowers in a basket</a></li>
+          <li><a href="#">Additionally</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h6>Occasions</h6>
+        <ul>
+          <li><a href="#">Birthday</a></li>
+          <li><a href="#">Congratulations</a></li>
+          <li><a href="#">Just Because</a></li>
+          <li><a href="#">Sympathy</a></li>
+          <li><a href="#">Thank You</a></li>
+          <li><a href="#">Wedding</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h6>Company</h6>
+        <ul>
+          <li><a href="#">About Us</a></li>
+        </ul>
+        <h6 class="mt-4">Help</h6>
+        <ul>
+          <li><a href="#">Contacts</a></li>
+          <li><a href="#">Delivery and Payment</a></li>
+          <li><a href="#" id="faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3">
+        <h5 class="mb-4">WISH BIG,<br>BLOOM BRIGHT.</h5>
+        <div class="row g-4">
+          <div class="col-6">
+            <h6>Address</h6>
+            <p class="small mb-0">403 S Arlington Heights Rd, Arlington Heights, IL 60005</p>
+          </div>
+          <div class="col-6">
+            <h6>Phone number</h6>
+            <p class="small mb-0">+1 (224)900-0367</p>
+          </div>
+          <div class="col-6">
+            <h6>Email</h6>
+            <p class="small mb-0">wishflowersinc@gmail.com</p>
+          </div>
+          <div class="col-6">
+            <h6>Follow Us</h6>
+            <a href="https://www.instagram.com/wishflowers.chicago" class="social-icon"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom text-center">
+      <div class="footer-socials mb-3">
+        <a href="PASTE LINK URL" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="PASTE LINK URL" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="PASTE LINK URL" class="social-icon" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        <a href="PASTE LINK URL" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+      </div>
+      <div>Created by <a href="https://hammadsami.com" class="footer-credit-link">Hammad Sami</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function initWishCarousel(root) {
+  const viewport = root.querySelector('.wish-carousel-viewport');
+  const track = root.querySelector('.wish-carousel-track');
+  const slots = Array.from(track.children);
+  const dotsWrap = root.querySelector('.wish-carousel-dots');
+  const prevBtn = root.querySelector('.wish-carousel-btn.prev');
+  const nextBtn = root.querySelector('.wish-carousel-btn.next');
+  let perView = 4;
+  let index = 0;
+
+  function getPerView() {
+    const w = window.innerWidth;
+    if (w < 576) return 1;
+    if (w < 768) return 2;
+    if (w < 992) return 3;
+    return 4;
+  }
+
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    const pages = Math.max(1, slots.length - perView + 1);
+    for (let i = 0; i < pages; i++) {
+      const b = document.createElement('button');
+      if (i === index) b.classList.add('active');
+      b.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(b);
+    }
+  }
+
+  function updateDots() {
+    Array.from(dotsWrap.children).forEach((b, i) => {
+      b.classList.toggle('active', i === index);
+    });
+  }
+
+  function layout() {
+    const slotWidth = slots[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(${-index * slotWidth}px)`;
+  }
+
+  function goTo(i) {
+    const maxIndex = Math.max(0, slots.length - perView);
+    index = Math.min(Math.max(i, 0), maxIndex);
+    layout();
+    updateDots();
+  }
+
+  function setup() {
+    perView = getPerView();
+    slots.forEach(slot => {
+      slot.style.width = (100 / perView) + '%';
+    });
+    index = Math.min(index, Math.max(0, slots.length - perView));
+    buildDots();
+    layout();
+  }
+
+  prevBtn.addEventListener('click', () => goTo(index - 1));
+  nextBtn.addEventListener('click', () => goTo(index + 1));
+  window.addEventListener('resize', setup);
+  setup();
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('[data-wish-carousel]').forEach(initWishCarousel);
+
+  const header = document.getElementById('wishHeader');
+  if (header) {
+    const toggleHeader = () => {
+      header.classList.toggle('is-scrolled', window.scrollY > 40);
+    };
+    window.addEventListener('scroll', toggleHeader);
+    toggleHeader();
+  }
+
+  const aboutMore = document.getElementById('aboutMoreText');
+  const readMoreBtn = document.querySelector('.read-more-toggle');
+  if (aboutMore && readMoreBtn) {
+    const label = readMoreBtn.querySelector('.read-more-label');
+    const icon = readMoreBtn.querySelector('.bounce-arrow');
+    aboutMore.addEventListener('shown.bs.collapse', function () {
+      label.textContent = 'Read Less';
+      icon.classList.remove('bi-arrow-down');
+      icon.classList.add('bi-arrow-up');
+    });
+    aboutMore.addEventListener('hidden.bs.collapse', function () {
+      label.textContent = 'Read More';
+      icon.classList.remove('bi-arrow-up');
+      icon.classList.add('bi-arrow-down');
+    });
+  }
+});
+
+</script>
+</body>
+</html>
