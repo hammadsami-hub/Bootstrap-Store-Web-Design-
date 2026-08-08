@@ -26,7 +26,7 @@ Replace **`PASTE IMAGE URL`** with your preferred image URL, and your image will
 
 ## 📸 Preview
 
-![[Bootstrap Store Web Design](https://github.com/hammadsami-hub/Bootstrap-Store-Web-Design-/blob/68326fe80ef04cdeb67778d877c3aa2cfd99fdec/Web%20Store%20Design.png)](Web Store Design.png)
+![Web Store Design.png]
 
 ## 👨‍💻 Developer
 
