@@ -26,7 +26,8 @@ Replace **`PASTE IMAGE URL`** with your preferred image URL, and your image will
 
 ## 📸 Preview
 
-![Web Store Design.png]
+Web Store Design.png
+
 
 ## 👨‍💻 Developer
 
