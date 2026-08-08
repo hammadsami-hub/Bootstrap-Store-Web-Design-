@@ -22,6 +22,8 @@ In the code, simply replace **`PASTE IMAGE URL`** with your preferred image URL.
 ```
 
 Just paste your image URL and the image will be updated.
+screencapture-wishflowers-co-2026-08-08-19_41_56.png
+
 
 ### Developer
 
